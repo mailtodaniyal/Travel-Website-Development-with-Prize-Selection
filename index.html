@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinology | Luxury Holiday Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> 01234 567890</span>
+                    <span><i class="fas fa-envelope"></i> enquiries@destinology.co.uk</span>
+                </div>
+                <div class="user-actions">
+                    <a href="#"><i class="fas fa-user"></i> Sign In</a>
+                    <a href="#"><i class="fas fa-heart"></i> Wishlist</a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img style="height: 40px;" src="assets/logo.png" alt="Destinology">
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="#">Holiday Types</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">Offers</a></li>
+                    <li><a href="#">Experiences</a></li>
+                    <li><a href="#">Inspiration</a></li>
+                </ul>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="search-hero">
+        <div class="container">
+            <div class="search-box animate-fade-in">
+                <h1>Find Your Perfect Holiday</h1>
+                <form class="search-form">
+                    <div class="form-group">
+                        <label>Destination</label>
+                        <input type="text" placeholder="Where would you like to go?">
+                    </div>
+                    <div class="form-group">
+                        <label>Departure Date</label>
+                        <input type="text" class="datepicker" placeholder="Select dates">
+                    </div>
+                    <div class="form-group">
+                        <label>Duration</label>
+                        <select>
+                            <option>Any duration</option>
+                            <option>7 nights</option>
+                            <option>10 nights</option>
+                            <option>14 nights</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Guests</label>
+                        <select>
+                            <option>2 Adults</option>
+                            <option>1 Adult</option>
+                            <option>2 Adults, 1 Child</option>
+                            <option>2 Adults, 2 Children</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary animate-pulse">Search Holidays</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="trust-badges">
+        <div class="container">
+            <div class="badge">
+            </div>
+            <div class="badge">
+            </div>
+            <div class="badge">
+                <div class="trustpilot-widget" data-locale="en-GB" data-template-id="5419b6ffb0d04a076446a9af" data-businessunit-id="5d4a3e4e445f8c0001b18a5a" data-style-height="28px" data-style-width="100%">
+                    <span>Rated <strong>4.8</strong>/5 based on <strong>12,345</strong> reviews</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="search-results">
+        <div class="container">
+            <aside class="filters-sidebar">
+                <div class="filter-section">
+                    <h3>Refine Your Search</h3>
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <div class="price-range-slider">
+                            <input type="range" min="500" max="10000" value="5000" class="slider" id="priceRange">
+                            <div class="price-values">
+                                <span>£500</span>
+                                <span>£10,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Star Rating</h4>
+                        <div class="star-rating-filter">
+                            <div class="star-option">
+                                <input type="checkbox" id="stars5" checked>
+                                <label for="stars5">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </label>
+                            </div>
+                            <div class="star-option">
+                                <input type="checkbox" id="stars4" checked>
+                                <label for="stars4">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </label>
+                            </div>
+                            <div class="star-option">
+                                <input type="checkbox" id="stars3">
+                                <label for="stars3">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Holiday Type</h4>
+                        <div class="checkbox-group">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="allInclusive" checked>
+                                <label for="allInclusive">All Inclusive</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="beach" checked>
+                                <label for="beach">Beach</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="luxury" checked>
+                                <label for="luxury">Luxury</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="family">
+                                <label for="family">Family</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="honeymoon">
+                                <label for="honeymoon">Honeymoon</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Board Basis</h4>
+                        <div class="checkbox-group">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="allInclusiveBoard" checked>
+                                <label for="allInclusiveBoard">All Inclusive</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="halfBoard">
+                                <label for="halfBoard">Half Board</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="bedBreakfast">
+                                <label for="bedBreakfast">Bed & Breakfast</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-secondary apply-filters">Apply Filters</button>
+                </div>
+            </aside>
+
+            <section class="results-container">
+                <div class="results-header">
+                    <h2>45 Holidays Found</h2>
+                    <div class="sort-options">
+                        <label>Sort by:</label>
+                        <select>
+                            <option>Recommended</option>
+                            <option>Price (Low to High)</option>
+                            <option>Price (High to Low)</option>
+                            <option>Star Rating</option>
+                            <option>Customer Rating</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="results-grid">
+                    <div class="holiday-card animate-card">
+                        <div class="card-image">
+                            <img src="assets/maldives-resort.jpg" alt="Luxury Maldives Resort">
+                            <div class="card-badge exclusive">Exclusive</div>
+                            <div class="card-wishlist">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Baros Maldives</h3>
+                                <div class="card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                            <div class="card-location">
+                                <i class="fas fa-map-marker-alt"></i> North Malé Atoll, Maldives
+                            </div>
+                            <div class="card-description">
+                                A romantic luxury island resort with pristine beaches and crystal clear waters, perfect for honeymooners.
+                            </div>
+                            <div class="card-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-moon"></i>
+                                    <span>7 nights</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>All Inclusive</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-plane"></i>
+                                    <span>Flights included</span>
+                                </div>
+                            </div>
+                            <div class="card-price">
+                                <div class="price-from">From</div>
+                                <div class="price-amount">£3,499</div>
+                                <div class="price-pp">per person</div>
+                            </div>
+                            <button class="btn-primary">View Deal</button>
+                        </div>
+                    </div>
+
+                    <div class="holiday-card animate-card">
+                        <div class="card-image">
+                            <img src="assets/dubai-hotel.jpg" alt="Luxury Dubai Hotel">
+                            <div class="card-badge limited">Limited Availability</div>
+                            <div class="card-wishlist">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Burj Al Arab Jumeirah</h3>
+                                <div class="card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                            <div class="card-location">
+                                <i class="fas fa-map-marker-alt"></i> Dubai, UAE
+                            </div>
+                            <div class="card-description">
+                                The world's most luxurious hotel, standing on an artificial island and offering stunning views of the Persian Gulf.
+                            </div>
+                            <div class="card-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-moon"></i>
+                                    <span>5 nights</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>Half Board</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-plane"></i>
+                                    <span>Flights included</span>
+                                </div>
+                            </div>
+                            <div class="card-price">
+                                <div class="price-from">From</div>
+                                <div class="price-amount">£4,299</div>
+                                <div class="price-pp">per person</div>
+                            </div>
+                            <button class="btn-primary">View Deal</button>
+                        </div>
+                    </div>
+
+                    <div class="holiday-card animate-card">
+                        <div class="card-image">
+                            <img src="assets/caribbean-resort.jpg" alt="Caribbean Luxury Resort">
+                            <div class="card-badge offer">Special Offer</div>
+                            <div class="card-wishlist">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Sandals Royal Barbados</h3>
+                                <div class="card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                            <div class="card-location">
+                                <i class="fas fa-map-marker-alt"></i> St. Lawrence Gap, Barbados
+                            </div>
+                            <div class="card-description">
+                                An ultra-luxury all-inclusive resort for couples only, featuring gourmet dining and premium spirits.
+                            </div>
+                            <div class="card-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-moon"></i>
+                                    <span>10 nights</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>All Inclusive</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-plane"></i>
+                                    <span>Flights included</span>
+                                </div>
+                            </div>
+                            <div class="card-price">
+                                <div class="price-old">£5,999</div>
+                                <div class="price-from">From</div>
+                                <div class="price-amount">£4,799</div>
+                                <div class="price-pp">per person</div>
+                                <div class="price-save">Save £1,200</div>
+                            </div>
+                            <button class="btn-primary">View Deal</button>
+                        </div>
+                    </div>
+
+                    <div class="holiday-card animate-card">
+                        <div class="card-image">
+                            <img src="assets/santorini-hotel.jpg" alt="Santorini Luxury Hotel">
+                            <div class="card-wishlist">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h3>Grace Hotel Santorini</h3>
+                                <div class="card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                            <div class="card-location">
+                                <i class="fas fa-map-marker-alt"></i> Santorini, Greece
+                            </div>
+                            <div class="card-description">
+                                A boutique luxury hotel with breathtaking caldera views, private plunge pools, and exceptional service.
+                            </div>
+                            <div class="card-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-moon"></i>
+                                    <span>7 nights</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>Bed & Breakfast</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-plane"></i>
+                                    <span>Flights included</span>
+                                </div>
+                            </div>
+                            <div class="card-price">
+                                <div class="price-from">From</div>
+                                <div class="price-amount">£2,899</div>
+                                <div class="price-pp">per person</div>
+                            </div>
+                            <button class="btn-primary">View Deal</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <button class="btn-pagination active">1</button>
+                    <button class="btn-pagination">2</button>
+                    <button class="btn-pagination">3</button>
+                    <button class="btn-pagination">4</button>
+                    <button class="btn-pagination next">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-section">
+                    <h4>Holiday Types</h4>
+                    <ul>
+                        <li><a href="#">All Inclusive Holidays</a></li>
+                        <li><a href="#">Luxury Holidays</a></li>
+                        <li><a href="#">Family Holidays</a></li>
+                        <li><a href="#">Honeymoons</a></li>
+                        <li><a href="#">Beach Holidays</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Destinations</h4>
+                    <ul>
+                        <li><a href="#">Caribbean</a></li>
+                        <li><a href="#">Maldives</a></li>
+                        <li><a href="#">Dubai</a></li>
+                        <li><a href="#">Mexico</a></li>
+                        <li><a href="#">Seychelles</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Destinology</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Why Choose Us</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Travel Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Help & Information</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Booking Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section newsletter">
+                    <h4>Sign Up For Offers</h4>
+                    <p>Subscribe to receive exclusive deals and destination inspiration</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="payment-methods">
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 Destinology. All rights reserved. Destinology is a trading name of The Global Travel Group Ltd.</p>
+                    <p>ABTA P7126 | ATOL 9516</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/datepicker.js"></script>
+</body>
+</html>
